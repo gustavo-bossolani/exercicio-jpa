@@ -22,23 +22,23 @@ public class Movimentacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	private BigDecimal valor;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoMovimentacao tipo;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar data;
-	
+
 	private String descricao;
-	
+
 	@ManyToOne
 	private Conta conta;
-	
+
 	@ManyToMany
 	private List<Categoria> categoria = new ArrayList<>();
-	
+
 	public List<Categoria> getCategoria() {
 		return categoria;
 	}
@@ -80,5 +80,11 @@ public class Movimentacao {
 	}
 	public void setConta(Conta conta) {
 		this.conta = conta;
+	}
+
+	@Override
+	public String toString() {
+		return "Movimentacao [id=" + id + ", valor=" + valor + ", tipo=" + tipo + ", data=" + data.get(Calendar.DATE) + ", descricao="
+				+ descricao + ", conta=" + conta + ", categoria=" + categoria + "]";
 	}
 }
