@@ -1,6 +1,7 @@
 package br.com.financas.modelo;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -84,7 +85,10 @@ public class Movimentacao {
 
 	@Override
 	public String toString() {
-		return "Movimentacao [id=" + id + ", valor=" + valor + ", tipo=" + tipo + ", data=" + data.get(Calendar.DATE) + ", descricao="
-				+ descricao + ", conta=" + conta + ", categoria=" + categoria + "]";
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+		format.setCalendar(data);
+		String dataString = format.format(data.getTime());
+		return "Movimentacao [id=" + id + ", valor=" + valor + ", tipo=" + tipo + ", data=" + dataString + ", conta=" + conta.getTitular()
+				+ ", categoria=" + categoria + "]";
 	}
 }

@@ -35,4 +35,9 @@ public class Categoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("nome: %s",nome);
+	}
 }

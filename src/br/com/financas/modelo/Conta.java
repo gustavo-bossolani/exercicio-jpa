@@ -23,7 +23,6 @@ public class Conta {
 	@OneToMany(mappedBy="conta", fetch = FetchType.EAGER)
 	private List<Movimentacao> movimentacoes;
 
-
 	@Deprecated
 	public Conta() {}
 
