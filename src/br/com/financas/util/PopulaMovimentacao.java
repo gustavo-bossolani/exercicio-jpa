@@ -9,7 +9,6 @@ import br.com.financas.modelo.Categoria;
 import br.com.financas.modelo.Conta;
 import br.com.financas.modelo.Movimentacao;
 import br.com.financas.modelo.TipoMovimentacao;
-import br.com.financas.util.JPAUtil;
 
 public class PopulaMovimentacao {
 
@@ -25,7 +24,7 @@ public class PopulaMovimentacao {
 		Categoria contas = new Categoria("Contas");
 		Categoria viagem = new Categoria("Viagem");
 		Categoria mensalidade = new Categoria("Mensalidade");
-		Categoria negocios = new Categoria("Negócios");
+		Categoria negocios = new Categoria("NegÃ³cios");
 		Categoria restaurante = new Categoria("Restaurante");
 		
 		manager.persist(contas);

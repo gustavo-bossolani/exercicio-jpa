@@ -21,7 +21,7 @@ public class TesteDesafio {
 		em.close();
 
 		for (Movimentacao movimentacao : movimentacoes) {
-			System.out.println("Movimentação: " + movimentacao.getDescricao());
+			System.out.println("MovimentaÃ§Ã£o: " + movimentacao.getDescricao());
 		}
 
 

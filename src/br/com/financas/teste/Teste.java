@@ -9,7 +9,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-		Conta conta1  = new Conta("Kleb„o", 234567, 35);
+		Conta conta1  = new Conta("Kleb√£o", 234567, 35);
 		Conta conta2  = new Conta("Gustavo Bossolani", 4556, 231);
 		
 		EntityManager em = new JPAUtil().getEntityManager();

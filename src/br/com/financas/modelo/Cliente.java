@@ -12,11 +12,11 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String profissa;
+	private String profissao;
 	private String endereco;
 	
 	@JoinColumn(unique=true)
-	@OneToOne
+	@OneToOne(mappedBy = "cliente")
 	private Conta conta;
 
 	
@@ -32,11 +32,11 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getProfissa() {
-		return profissa;
+	public String getProfissao() {
+		return profissao;
 	}
-	public void setProfissa(String profissa) {
-		this.profissa = profissa;
+	public void setProfissao(String profissa) {
+		this.profissao = profissa;
 	}
 	public String getEndereco() {
 		return endereco;
